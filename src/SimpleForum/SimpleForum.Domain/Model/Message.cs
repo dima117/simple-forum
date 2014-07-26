@@ -2,7 +2,7 @@
 
 namespace SimpleForum.Domain.Model
 {
-	public class Message
+	public class Reply
 	{
 		public Guid Id { get; set; }
 

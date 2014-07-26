@@ -11,7 +11,7 @@ namespace SimpleForum.Domain
 		}
 
 		public DbSet<User> User { get; set; }
-		public DbSet<Message> Message { get; set; }
+		public DbSet<Reply> Reply { get; set; }
 		public DbSet<Topic> Topic { get; set; }
 		public DbSet<Section> Section { get; set; } 
 	}
