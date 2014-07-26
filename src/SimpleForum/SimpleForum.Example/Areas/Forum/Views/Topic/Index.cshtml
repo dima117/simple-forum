@@ -1,0 +1,22 @@
+﻿@model SimpleForum.Web.Models.Topic.TopicIndexModel
+
+
+<h2>@Model.Subject</h2>
+<hr />
+<p>
+	<a href="#" class="btn btn-primary">Post a reply</a>
+</p>
+<hr />
+
+@Html.Partial("Message", Model)
+<hr />
+
+@foreach (var reply in Model.Replies)
+{
+	@Html.Partial("Message", reply)
+	<hr />
+}
+
+<p>
+	<a href="#" class="btn btn-primary">Post a reply</a>
+</p>

@@ -6,6 +6,7 @@ using SimpleForum.Domain;
 using SimpleForum.Domain.Model;
 using SimpleForum.Web.Models.Forum;
 using SimpleForum.Web.Models.Section;
+using SimpleForum.Web.Models.Topic;
 
 namespace SimpleForum.Web
 {
@@ -47,6 +48,7 @@ namespace SimpleForum.Web
 			Mapper.CreateMap<Section, ForumIndexSectionModel>();
 			Mapper.CreateMap<Section, SectionIndexModel>();
 			Mapper.CreateMap<Topic, SectionIndexTopicModel>();
+			Mapper.CreateMap<Topic, TopicIndexModel>();
 		}
 	}
 
@@ -55,6 +57,7 @@ namespace SimpleForum.Web
 		public SimpleForumMigrationsConfiguration()
 		{
 			AutomaticMigrationsEnabled = true;
+			AutomaticMigrationDataLossAllowed = true;
 		}
 
 		protected override void Seed(SimpleForumDbContext context)

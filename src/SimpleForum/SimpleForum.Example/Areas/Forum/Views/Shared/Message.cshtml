@@ -1,0 +1,14 @@
+﻿@model SimpleForum.Web.Models.IMessageModel
+<div class="row">
+	<div class="col-md-2">
+		<strong>
+			<a href="#">@Model.AuthorDisplayName</a>
+		</strong>
+		<p class="help-block">
+			on @Model.Created.ToShortDateString() @Model.Created.ToShortTimeString()
+		</p>
+	</div>
+	<div class="col-md-10">
+		@Model.Text
+	</div>
+</div>

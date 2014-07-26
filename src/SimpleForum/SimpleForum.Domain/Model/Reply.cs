@@ -8,6 +8,10 @@ namespace SimpleForum.Domain.Model
 
 		public DateTime Created { get; set; }
 
+		public Guid TopicId { get; set; }
+
+		public Topic Topic { get; set; }
+
 		public Guid AuthorId { get; set; }
 
 		public User Author { get; set; }

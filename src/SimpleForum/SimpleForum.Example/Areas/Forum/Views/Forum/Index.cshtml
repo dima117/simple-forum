@@ -1,9 +1,13 @@
 ﻿@model SimpleForum.Web.Models.Forum.ForumIndexModel
 
+<h2>Simple forum</h2>
+<hr />
+
 <table class="table">
+	<col style="width: 42px;"/>
 	<thead>
 		<tr>
-			<th></th>
+			<th colspan="2"></th>
 			<th>Topics</th>
 			<th>Posts</th>
 			<th>Last post</th>
@@ -11,8 +15,11 @@
 	</thead>
 	<tbody>
 		@foreach (var sectionModel in Model.Sections)
-  {
+		{
 			<tr>
+				<td>
+					<i class="fa fa-folder-open-o fa-2x text-muted"></i>
+				</td>
 				<td>
 					<a href="@Url.Action("Index", "Section", new { id = sectionModel.Id })">@sectionModel.Title</a>
 					<p class="help-block">@sectionModel.Description</p>
@@ -21,6 +28,6 @@
 				<td></td>
 				<td></td>
 			</tr>
-  }
+		}
 	</tbody>
 </table>

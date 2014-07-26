@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using SimpleForum.Domain.Model;
 
 namespace SimpleForum.Domain
@@ -9,6 +10,14 @@ namespace SimpleForum.Domain
 			: base("SimpleForum.MainDB")
 		{
 		}
+
+		      protected override void OnModelCreating( DbModelBuilder modelBuilder )
+      {
+
+         modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+
+
+      }
 
 		public DbSet<User> User { get; set; }
 		public DbSet<Reply> Reply { get; set; }

@@ -1,15 +1,18 @@
 ﻿@model SimpleForum.Web.Models.Section.SectionIndexModel
 
 <h2>@Model.Title</h2>
+<hr />
 
 <p>
-	<a href="#" class="btn btn-info">Post a new topic</a>
+	<a href="#" class="btn btn-primary">Post a new topic</a>
 </p>
+<hr />
 
 <table class="table">
+	<col style="width: 42px;" />
 	<thead>
 		<tr>
-			<th>Topics</th>
+			<th colspan="2">Topics</th>
 			<th>Replies</th>
 			<th>Views</th>
 			<th>Last post</th>
@@ -20,7 +23,14 @@
 		{
 			<tr>
 				<td>
-					<a href="@Url.Action("Index", "Section", new { id = topic.Id })">@topic.Subject</a>
+					<i class="fa fa-comments-o fa-2x text-muted"></i>
+				</td>
+				<td>
+					<a href="@Url.Action("Index", "Topic", new { id = topic.Id })">@topic.Subject</a>
+					<p>
+						by <a href="#">@topic.AuthorDisplayName</a>
+						on @topic.Created.ToShortDateString() @topic.Created.ToShortTimeString()
+					</p>
 				</td>
 				<td></td>
 				<td></td>
@@ -29,3 +39,9 @@
 		}
 	</tbody>
 </table>
+<hr />
+
+<p>
+	<a href="#" class="btn btn-primary">Post a new topic</a>
+</p>
+

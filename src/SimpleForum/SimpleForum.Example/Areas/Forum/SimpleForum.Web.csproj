@@ -120,19 +120,21 @@
   <ItemGroup>
     <Compile Include="Controllers\ForumController.cs" />
     <Compile Include="Controllers\SectionController.cs" />
+    <Compile Include="Controllers\TopicController.cs" />
     <Compile Include="ForumAreaRegistration.cs" />
     <Compile Include="Models\Forum\SectionsIndexModel.cs" />
     <Compile Include="Models\Forum\ForumIndexSectionModel.cs" />
+    <Compile Include="Models\IMessageModel.cs" />
     <Compile Include="Models\Section\SectionIndexModel.cs" />
     <Compile Include="Models\Section\SectionIndexTopicModel.cs" />
+    <Compile Include="Models\Topic\TopicIndexModel.cs" />
+    <Compile Include="Models\Topic\TopicIndexReplyModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Shared\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
@@ -148,6 +150,8 @@
   <ItemGroup>
     <Content Include="Views\Forum\Index.cshtml" />
     <Content Include="Views\Section\Index.cshtml" />
+    <Content Include="Views\Topic\Index.cshtml" />
+    <Content Include="Views\Shared\Message.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
