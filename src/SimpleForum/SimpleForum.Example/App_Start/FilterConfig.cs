@@ -1,6 +1,7 @@
-﻿using System.Web.Mvc;
+﻿using System.Web;
+using System.Web.Mvc;
 
-namespace SimpleForum.WebApp.App_Start
+namespace SimpleForum.Example
 {
 	public class FilterConfig
 	{

@@ -2,10 +2,9 @@
 using AutoMapper;
 using SimpleForum.Domain;
 using SimpleForum.Domain.Model;
-using SimpleForum.WebApp.App_Start;
-using SimpleForum.WebApp.Areas.Forum.Models.Sections;
+using SimpleForum.Web.Models.Sections;
 
-namespace SimpleForum.WebApp.Areas.Forum
+namespace SimpleForum.Web
 {
 	public class ForumAreaRegistration : AreaRegistration
 	{
@@ -26,7 +25,7 @@ namespace SimpleForum.WebApp.Areas.Forum
 				"Forum_default",
 				"forum/{controller}/{action}/{id}",
 				new { controller = "Sections", action = "Index", id = UrlParameter.Optional },
-				new[] { "SimpleForum.WebApp.Areas.Forum.Controllers" }
+				new[] { "SimpleForum.Web.Controllers" }
 			);
 		}
 

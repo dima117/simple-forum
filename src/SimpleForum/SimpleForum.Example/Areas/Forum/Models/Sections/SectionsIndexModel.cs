@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SimpleForum.WebApp.Areas.Forum.Models.Sections
+namespace SimpleForum.Web.Models.Sections
 {
 	public class SectionsIndexModel
 	{
