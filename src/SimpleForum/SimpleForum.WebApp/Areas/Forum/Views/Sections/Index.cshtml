@@ -1,21 +1,20 @@
-﻿@model SimpleForum.Web.Models.Sections.SectionsIndexModel
+﻿@model SimpleForum.WebApp.Areas.Forum.Models.Sections.SectionsIndexModel
 
 <table>
 	<thead>
-
 		<tr>
 			<th></th>
 		</tr>
 	</thead>
 	<tbody>
 		@foreach (var sectionModel in Model.Sections)
-  {
+		{
 			<tr>
 				<td>
 					<a href="#">@sectionModel.Title</a>
 					<p class="help-block">@sectionModel.Description</p>
 				</td>
 			</tr>
-  }
+		}
 	</tbody>
 </table>

@@ -2,8 +2,8 @@
 using AutoMapper;
 using SimpleForum.Domain;
 using SimpleForum.Domain.Model;
-using SimpleForum.Web.Models.Sections;
 using SimpleForum.WebApp.App_Start;
+using SimpleForum.WebApp.Areas.Forum.Models.Sections;
 
 namespace SimpleForum.WebApp.Areas.Forum
 {
@@ -19,8 +19,6 @@ namespace SimpleForum.WebApp.Areas.Forum
 
 		public override void RegisterArea(AreaRegistrationContext context)
 		{
-			ViewEngines.Engines.Add(new SimpleForumViewEngine());
-
 			InitDatabase();
 			InitModelMapping();
 

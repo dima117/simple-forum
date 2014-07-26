@@ -108,7 +108,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\SimpleForumViewEngine.cs" />
     <Compile Include="Areas\Forum\ForumAreaRegistration.cs" />
     <Compile Include="Areas\Forum\Controllers\SectionsController.cs" />
     <Compile Include="Areas\Forum\Models\Sections\SectionsIndexModel.cs" />
@@ -132,7 +131,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Areas\Forum\Views\_ViewStart.cshtml" />
+    <Content Include="_ViewStart.cshtml" />
     <None Include="Scripts\jquery-1.9.0.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -151,7 +150,6 @@
   <ItemGroup>
     <Folder Include="Areas\Forum\Views\Shared\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -163,10 +161,7 @@
     <Content Include="Areas\Forum\Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\_LayoutMaster.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_LayoutMaster.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />

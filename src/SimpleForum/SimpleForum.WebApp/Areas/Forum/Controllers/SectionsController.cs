@@ -3,7 +3,7 @@ using System.Web.Mvc;
 using AutoMapper;
 using SimpleForum.Domain;
 using SimpleForum.Domain.Model;
-using SimpleForum.Web.Models.Sections;
+using SimpleForum.WebApp.Areas.Forum.Models.Sections;
 
 namespace SimpleForum.WebApp.Areas.Forum.Controllers
 {
