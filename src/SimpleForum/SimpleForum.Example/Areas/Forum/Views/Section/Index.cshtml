@@ -1,0 +1,25 @@
+﻿@model SimpleForum.Web.Models.Section.SectionIndexModel
+
+<h2>@Model.Title</h2>
+
+<p>
+	<a href="#" class="btn btn-info">Post a new topic</a>
+</p>
+
+<table>
+	<thead>
+		<tr>
+			<th>Topics</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var topic in Model.Topics)
+		{
+			<tr>
+				<td>
+					<a href="@Url.Action("Index", "Section", new { id = topic.Id })">@topic.Subject</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

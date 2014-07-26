@@ -1,8 +1,11 @@
-﻿using System.Web.Mvc;
+﻿using System.Data.Entity;
+using System.Data.Entity.Migrations;
+using System.Web.Mvc;
 using AutoMapper;
 using SimpleForum.Domain;
 using SimpleForum.Domain.Model;
-using SimpleForum.Web.Models.Sections;
+using SimpleForum.Web.Models.Forum;
+using SimpleForum.Web.Models.Section;
 
 namespace SimpleForum.Web
 {
@@ -24,13 +27,15 @@ namespace SimpleForum.Web
 			context.MapRoute(
 				"Forum_default",
 				"forum/{controller}/{action}/{id}",
-				new { controller = "Sections", action = "Index", id = UrlParameter.Optional },
+				new { controller = "Forum", action = "Index", id = UrlParameter.Optional },
 				new[] { "SimpleForum.Web.Controllers" }
 			);
 		}
 
 		private void InitDatabase()
 		{
+			Database.SetInitializer(new MigrateDatabaseToLatestVersion<SimpleForumDbContext, SimpleForumMigrationsConfiguration>()); 
+
 			using (var context = new SimpleForumDbContext())
 			{
 				context.Database.Initialize(false);
@@ -39,7 +44,22 @@ namespace SimpleForum.Web
 
 		private void InitModelMapping()
 		{
-			Mapper.CreateMap<Section, SectionModel>();
+			Mapper.CreateMap<Section, ForumIndexSectionModel>();
+			Mapper.CreateMap<Section, SectionIndexModel>();
+			Mapper.CreateMap<Topic, SectionIndexTopicModel>();
+		}
+	}
+
+	public sealed class SimpleForumMigrationsConfiguration : DbMigrationsConfiguration<SimpleForumDbContext>
+	{
+		public SimpleForumMigrationsConfiguration()
+		{
+			AutomaticMigrationsEnabled = true;
+		}
+
+		protected override void Seed(SimpleForumDbContext context)
+		{
+
 		}
 	}
 }
