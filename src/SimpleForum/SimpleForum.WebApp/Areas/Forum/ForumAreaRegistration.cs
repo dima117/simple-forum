@@ -1,7 +1,11 @@
 ﻿using System.Web.Mvc;
+using AutoMapper;
 using SimpleForum.Domain;
+using SimpleForum.Domain.Model;
+using SimpleForum.Web.Models.Sections;
+using SimpleForum.WebApp.App_Start;
 
-namespace SimpleForum.Web
+namespace SimpleForum.WebApp.Areas.Forum
 {
 	public class ForumAreaRegistration : AreaRegistration
 	{
@@ -15,12 +19,16 @@ namespace SimpleForum.Web
 
 		public override void RegisterArea(AreaRegistrationContext context)
 		{
+			ViewEngines.Engines.Add(new SimpleForumViewEngine());
+
 			InitDatabase();
+			InitModelMapping();
 
 			context.MapRoute(
 				"Forum_default",
 				"forum/{controller}/{action}/{id}",
-				new { controller = "Forum", action = "Index", id = UrlParameter.Optional }
+				new { controller = "Sections", action = "Index", id = UrlParameter.Optional },
+				new[] { "SimpleForum.WebApp.Areas.Forum.Controllers" }
 			);
 		}
 
@@ -30,6 +38,11 @@ namespace SimpleForum.Web
 			{
 				context.Database.Initialize(false);
 			}
+		}
+
+		private void InitModelMapping()
+		{
+			Mapper.CreateMap<Section, SectionModel>();
 		}
 	}
 }
