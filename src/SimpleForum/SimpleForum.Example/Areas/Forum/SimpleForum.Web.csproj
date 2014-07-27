@@ -124,6 +124,7 @@
     <Compile Include="Controllers\TopicController.cs" />
     <Compile Include="Controllers\WriteController.cs" />
     <Compile Include="ForumAreaRegistration.cs" />
+    <Compile Include="Models\Account\LoginModel.cs" />
     <Compile Include="Models\LastReplyModel.cs" />
     <Compile Include="Models\Forum\SectionsIndexModel.cs" />
     <Compile Include="Models\Forum\ForumIndexSectionModel.cs" />
