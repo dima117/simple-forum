@@ -15,13 +15,13 @@
 		<tr>
 			<th colspan="2"></th>
 			<th>Topics</th>
-			<th>Posts</th>
-			<th>Last post</th>
+			<th>Replies</th>
+			<th>Last reply</th>
 		</tr>
 	</thead>
 	<tbody>
 		@foreach (var sectionModel in Model.Sections)
-  {
+		{
 			<tr>
 				<td>
 					<i class="fa fa-folder-open-o fa-2x text-muted"></i>
@@ -34,21 +34,19 @@
 				<td>@sectionModel.ReplyCount.GetValueOrDefault()</td>
 				<td>
 					@if (sectionModel.LastReply != null)
-	 {
+					{
 						<text>
-						by <a href="#">@sectionModel.LastReply.AuthorDisplayName</a>
-						in <a href="@Url.Action("Index", "Topic", new { id = sectionModel.LastReply.TopicId })">@sectionModel.LastReply.TopicSubject</a>
-						on @sectionModel.LastReply.Created.ToShortDateString() @sectionModel.LastReply.Created.ToShortTimeString()
+							by <a href="#">@sectionModel.LastReply.AuthorDisplayName</a>
+							in <a href="@Url.Action("Index", "Topic", new { id = sectionModel.LastReply.TopicId })">@sectionModel.LastReply.TopicSubject</a>
+							on @sectionModel.LastReply.Created.ToShortDateString() @sectionModel.LastReply.Created.ToShortTimeString()
 						</text>
-	 }
-	 else
-	 {
-						<text>No posts</text>
-	 }
-
-
+					}
+					else
+					{
+						<text>No replies</text>
+					}
 				</td>
 			</tr>
-  }
+		}
 	</tbody>
 </table>

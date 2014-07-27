@@ -5,6 +5,7 @@ using AutoMapper;
 using SimpleForum.Domain;
 using SimpleForum.Domain.Dto;
 using SimpleForum.Domain.Model;
+using SimpleForum.Web.Models;
 using SimpleForum.Web.Models.Forum;
 using SimpleForum.Web.Models.Section;
 using SimpleForum.Web.Models.Topic;
@@ -47,10 +48,10 @@ namespace SimpleForum.Web
 		private void InitModelMapping()
 		{
 			Mapper.CreateMap<SectionDto, ForumIndexSectionModel>();
-			Mapper.CreateMap<ReplyDto, ForumIndexLastReplyModel>();
+			Mapper.CreateMap<TopicDto, SectionIndexTopicModel>();
+			Mapper.CreateMap<ReplyDto, LastReplyModel>();
 
 			Mapper.CreateMap<Section, SectionIndexModel>();
-			Mapper.CreateMap<Topic, SectionIndexTopicModel>();
 			Mapper.CreateMap<Topic, TopicIndexModel>();
 			Mapper.CreateMap<Reply, TopicIndexReplyModel>();
 		}

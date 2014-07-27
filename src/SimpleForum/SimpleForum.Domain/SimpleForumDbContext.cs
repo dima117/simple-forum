@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
@@ -54,6 +55,36 @@ namespace SimpleForum.Domain
 						.ToList();
 
 			return sections;
+		}
+
+		public List<TopicDto> GetTopics(Guid sectionId)
+		{
+			var topics = Topics
+						.Where(t => t.SectionId == sectionId)
+						.Select(t => new TopicDto
+						{
+							Id = t.Id,
+							Subject = t.Subject,
+							Created = t.Created,
+							AuthorId = t.AuthorId,
+							AuthorDisplayName = t.Author.DisplayName,
+							ReplyCount = t.Replies.Count,
+							LastReply = t.Replies
+								.OrderByDescending(r => r.Created)
+								.Select(r =>
+									new ReplyDto
+									{
+										Created = r.Created,
+										AuthorId = r.AuthorId,
+										AuthorDisplayName = r.Author.DisplayName,
+										TopicId = r.TopicId,
+										TopicSubject = r.Topic.Subject
+									})
+								.FirstOrDefault()
+						})
+						.ToList();
+
+			return topics;
 		}
 	}
 }

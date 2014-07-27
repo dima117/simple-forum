@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace SimpleForum.Web.Models.Section
+namespace SimpleForum.Domain.Dto
 {
-	public class SectionIndexTopicModel
+	public class TopicDto
 	{
 		public Guid Id { get; set; }
 
@@ -13,9 +13,9 @@ namespace SimpleForum.Web.Models.Section
 		public Guid AuthorId { get; set; }
 
 		public string AuthorDisplayName { get; set; }
-		
-		public int? ReplyCount { get; set; }
 
-		public LastReplyModel LastReply { get; set; }
+		public int ReplyCount { get; set; }
+
+		public ReplyDto LastReply { get; set; }
 	}
 }
