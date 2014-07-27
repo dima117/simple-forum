@@ -118,9 +118,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ForumController.cs" />
     <Compile Include="Controllers\SectionController.cs" />
     <Compile Include="Controllers\TopicController.cs" />
+    <Compile Include="Controllers\WriteController.cs" />
     <Compile Include="ForumAreaRegistration.cs" />
     <Compile Include="Models\LastReplyModel.cs" />
     <Compile Include="Models\Forum\SectionsIndexModel.cs" />
@@ -153,6 +155,9 @@
     <Content Include="Views\Section\Index.cshtml" />
     <Content Include="Views\Topic\Index.cshtml" />
     <Content Include="Views\Shared\Message.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Write\Topic.cshtml" />
+    <Content Include="Views\Write\Reply.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

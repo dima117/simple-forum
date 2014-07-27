@@ -4,7 +4,7 @@
 <hr />
 
 <p>
-	<a href="#" class="btn btn-primary">Post a new topic</a>
+	<a href="@Url.Action("Topic", "Write", new { id = Model.Id })" class="btn btn-primary">Post a new topic</a>
 </p>
 <hr />
 
@@ -24,7 +24,7 @@
 	</thead>
 	<tbody>
 		@foreach (var topic in Model.Topics)
-		{
+  {
 			<tr>
 				<td>
 					<i class="fa fa-comments-o fa-2x text-muted"></i>
@@ -39,24 +39,24 @@
 				<td>@topic.ReplyCount.GetValueOrDefault()</td>
 				<td>
 					@if (topic.LastReply != null)
-					{
+	 {
 						<text>
-							by <a href="#">@topic.LastReply.AuthorDisplayName</a>
-							on @topic.LastReply.Created.ToShortDateString() @topic.LastReply.Created.ToShortTimeString()
+						by <a href="#">@topic.LastReply.AuthorDisplayName</a>
+						on @topic.LastReply.Created.ToShortDateString() @topic.LastReply.Created.ToShortTimeString()
 						</text>
-					}
-					else
-					{
+	 }
+	 else
+	 {
 						<text>No replies</text>
-					}
+	 }
 				</td>
 			</tr>
-		}
+  }
 	</tbody>
 </table>
 <hr />
 
 <p>
-	<a href="#" class="btn btn-primary">Post a new topic</a>
+	<a href="@Url.Action("Topic", "Write", new { id = Model.Id })" class="btn btn-primary">Post a new topic</a>
 </p>
 
