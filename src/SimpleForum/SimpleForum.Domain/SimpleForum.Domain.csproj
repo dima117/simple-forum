@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dto\ReplyDto.cs" />
+    <Compile Include="Dto\SectionDto.cs" />
     <Compile Include="Model\Reply.cs" />
     <Compile Include="Model\Section.cs" />
     <Compile Include="Model\Topic.cs" />

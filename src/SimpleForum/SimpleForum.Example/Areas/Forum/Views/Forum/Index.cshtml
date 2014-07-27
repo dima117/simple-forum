@@ -4,7 +4,13 @@
 <hr />
 
 <table class="table">
-	<col style="width: 42px;"/>
+	<colgroup>
+		<col style="width: 42px;" />
+		<col />
+		<col />
+		<col />
+		<col style="width: 30%;" />
+	</colgroup>
 	<thead>
 		<tr>
 			<th colspan="2"></th>
@@ -15,7 +21,7 @@
 	</thead>
 	<tbody>
 		@foreach (var sectionModel in Model.Sections)
-		{
+  {
 			<tr>
 				<td>
 					<i class="fa fa-folder-open-o fa-2x text-muted"></i>
@@ -24,10 +30,25 @@
 					<a href="@Url.Action("Index", "Section", new { id = sectionModel.Id })">@sectionModel.Title</a>
 					<p class="help-block">@sectionModel.Description</p>
 				</td>
-				<td></td>
-				<td></td>
-				<td></td>
+				<td>@sectionModel.TopicCount.GetValueOrDefault()</td>
+				<td>@sectionModel.ReplyCount.GetValueOrDefault()</td>
+				<td>
+					@if (sectionModel.LastReply != null)
+	 {
+						<text>
+						by <a href="#">@sectionModel.LastReply.AuthorDisplayName</a>
+						in <a href="@Url.Action("Index", "Topic", new { id = sectionModel.LastReply.TopicId })">@sectionModel.LastReply.TopicSubject</a>
+						on @sectionModel.LastReply.Created.ToShortDateString() @sectionModel.LastReply.Created.ToShortTimeString()
+						</text>
+	 }
+	 else
+	 {
+						<text>No posts</text>
+	 }
+
+
+				</td>
 			</tr>
-		}
+  }
 	</tbody>
 </table>

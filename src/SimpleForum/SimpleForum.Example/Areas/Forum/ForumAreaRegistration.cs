@@ -3,6 +3,7 @@ using System.Data.Entity.Migrations;
 using System.Web.Mvc;
 using AutoMapper;
 using SimpleForum.Domain;
+using SimpleForum.Domain.Dto;
 using SimpleForum.Domain.Model;
 using SimpleForum.Web.Models.Forum;
 using SimpleForum.Web.Models.Section;
@@ -45,10 +46,13 @@ namespace SimpleForum.Web
 
 		private void InitModelMapping()
 		{
-			Mapper.CreateMap<Section, ForumIndexSectionModel>();
+			Mapper.CreateMap<SectionDto, ForumIndexSectionModel>();
+			Mapper.CreateMap<ReplyDto, ForumIndexLastReplyModel>();
+
 			Mapper.CreateMap<Section, SectionIndexModel>();
 			Mapper.CreateMap<Topic, SectionIndexTopicModel>();
 			Mapper.CreateMap<Topic, TopicIndexModel>();
+			Mapper.CreateMap<Reply, TopicIndexReplyModel>();
 		}
 	}
 

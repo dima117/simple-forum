@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SimpleForum.Domain.Model
 {
@@ -17,5 +18,6 @@ namespace SimpleForum.Domain.Model
 		public Guid AuthorId { get; set; }
 		public User Author { get; set; }
 
+		public ICollection<Reply> Replies { get; set; }
 	}
 }

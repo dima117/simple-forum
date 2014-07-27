@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SimpleForum.Domain.Model
 {
@@ -9,5 +10,7 @@ namespace SimpleForum.Domain.Model
 		public string Title { get; set; }
 
 		public string Description { get; set; }
+
+		public ICollection<Topic> Topics { get; set; }
 	}
 }
