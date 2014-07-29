@@ -1,5 +1,9 @@
 ﻿using System;
+using System.Linq;
 using System.Web.Mvc;
+using SimpleForum.Domain;
+using SimpleForum.Domain.Model;
+using SimpleForum.Web.Models.Write;
 
 namespace SimpleForum.Web.Controllers
 {
@@ -9,7 +13,19 @@ namespace SimpleForum.Web.Controllers
 		[HttpGet]
         public ActionResult Topic(Guid id)
         {
-            return View();
+			using (var db = new SimpleForumDbContext())
+			{
+				var section = db.Set<Section>().Single(s => s.Id == id);
+				
+				var model = new TopicModel
+				{
+					SectionTitle = section.Title
+				};
+
+				return View(model);
+			}
+
+           
         }
 
 		[HttpGet]

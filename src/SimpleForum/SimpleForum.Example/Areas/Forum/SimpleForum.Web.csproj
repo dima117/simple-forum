@@ -133,6 +133,7 @@
     <Compile Include="Models\Section\SectionIndexTopicModel.cs" />
     <Compile Include="Models\Topic\TopicIndexModel.cs" />
     <Compile Include="Models\Topic\TopicIndexReplyModel.cs" />
+    <Compile Include="Models\Write\TopicModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
