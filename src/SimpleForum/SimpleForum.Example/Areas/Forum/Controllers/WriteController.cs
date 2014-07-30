@@ -63,10 +63,50 @@ namespace SimpleForum.Web.Controllers
 		[HttpGet]
 		public ActionResult Reply(Guid id)
 		{
+			using (var db = new SimpleForumDbContext())
+			{
+				var topic = db.Set<Topic>().Single(s => s.Id == id);
 
+				var model = new ReplyModel
+				{
+					TopicSubject = topic.Subject
+				};
 
+				return View(model);
+			}
+		}
 
-			return View();
+		[HttpPost]
+		public ActionResult Reply(Guid id, ReplyModel model)
+		{
+			using (var db = new SimpleForumDbContext())
+			{
+				var user = db.Users.Single(u => u.Email == User.Identity.Name);
+				var topic = db.Set<Topic>().Single(t => t.Id == id);
+
+				if (!ModelState.IsValid)
+				{
+					model.TopicSubject = topic.Subject;
+					return View(model);
+				}
+
+				Guid replyId = Guid.NewGuid();
+
+				var reply = new Reply
+				{
+					Id = replyId,
+					Text = model.Text,
+					Created = DateTime.Now,
+
+					AuthorId = user.Id,
+					TopicId = topic.Id
+				};
+
+				db.Set<Reply>().Add(reply);
+				db.SaveChanges();
+
+				return RedirectToAction("Index", "Topic", new { id = topic.Id });
+			}
 		}
 	}
 }
