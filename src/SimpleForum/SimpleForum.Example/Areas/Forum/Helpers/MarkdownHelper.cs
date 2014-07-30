@@ -12,7 +12,11 @@ namespace SimpleForum.Web.Helpers
 		/// <summary>
 		/// An instance of the Markdown class that performs the transformations.
 		/// </summary>
-		static readonly Markdown markdownTransformer = new Markdown();
+		static readonly Markdown markdownTransformer = new Markdown
+		{
+			NewWindowForExternalLinks = true,
+			NoFollowLinks = true
+		};
 
 		/// <summary>
 		/// Transforms a string of Markdown into HTML.
