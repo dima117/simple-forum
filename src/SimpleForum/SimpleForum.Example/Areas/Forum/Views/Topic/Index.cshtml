@@ -1,5 +1,6 @@
 ﻿@model SimpleForum.Web.Models.Topic.TopicIndexModel
 
+<div id="top"></div>
 
 <h2>@Model.Subject</h2>
 <hr />
@@ -14,6 +15,9 @@
 @foreach (var reply in Model.Replies)
 {
 	@Html.Partial("Message", reply)
+	<p class="clearfix">
+		<a class="btn btn-info btn-xs pull-right" href="#top">Top</a>
+	</p>
 	<hr />
 }
 

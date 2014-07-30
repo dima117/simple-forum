@@ -1,0 +1,10 @@
+- breadcrumbs
+- reply to
+- logged user
+- section sort order
+
+- admin page
+	- new sections
+	- sort sections
+- subscriptions
+- localization

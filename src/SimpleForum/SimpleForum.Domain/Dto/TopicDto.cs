@@ -17,5 +17,10 @@ namespace SimpleForum.Domain.Dto
 		public int ReplyCount { get; set; }
 
 		public ReplyDto LastReply { get; set; }
+
+		public DateTime SortOrder
+		{
+			get { return LastReply != null ? LastReply.Created : Created; }
+		}
 	}
 }
