@@ -55,6 +55,9 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\..\..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="MarkdownDeep">
+      <HintPath>..\..\..\packages\MarkdownDeep.NET.1.5\lib\.NetFramework 3.5\MarkdownDeep.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -124,6 +127,7 @@
     <Compile Include="Controllers\TopicController.cs" />
     <Compile Include="Controllers\WriteController.cs" />
     <Compile Include="ForumAreaRegistration.cs" />
+    <Compile Include="Helpers\MarkdownHelper.cs" />
     <Compile Include="Models\Account\LoginModel.cs" />
     <Compile Include="Models\LastReplyModel.cs" />
     <Compile Include="Models\Forum\SectionsIndexModel.cs" />

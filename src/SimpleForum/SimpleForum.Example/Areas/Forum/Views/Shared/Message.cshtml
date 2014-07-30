@@ -1,4 +1,5 @@
-﻿@model SimpleForum.Web.Models.IMessageModel
+﻿@using SimpleForum.Web.Helpers
+@model SimpleForum.Web.Models.IMessageModel
 <div class="row">
 	<div class="col-md-2">
 		<strong>
@@ -9,6 +10,6 @@
 		</p>
 	</div>
 	<div class="col-md-10">
-		@Model.Text
+		@Html.Markdown(Model.Text)
 	</div>
 </div>
