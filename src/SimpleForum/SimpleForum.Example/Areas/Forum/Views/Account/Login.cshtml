@@ -13,16 +13,16 @@
 
 	<div class="col-xs-3">
 		@using (Html.BeginForm())
-  {
+		{
 			<div class="form-group">
 				@Html.LabelFor(m => m.Email)
-				@Html.TextBoxFor(m => m.Email, new { @class = "form-control", type = "email", placeholder = "example@example.com" })
-				@Html.ValidationMessageFor(m => m.Email, null, new { @class = "text-danger" })
+				@Html.TextBoxFor(m => m.Email, new {@class = "form-control", type = "email", placeholder = "example@example.com"})
+				@Html.ValidationMessageFor(m => m.Email, null, new {@class = "text-danger"})
 			</div>
 			<div class="form-group">
 				@Html.LabelFor(m => m.Password)
-				@Html.PasswordFor(m => m.Password, new { @class = "form-control", type = "password", placeholder = "your password" })
-				@Html.ValidationMessageFor(m => m.Password, null, new { @class = "text-danger" })
+				@Html.PasswordFor(m => m.Password, new {@class = "form-control", type = "password", placeholder = "your password"})
+				@Html.ValidationMessageFor(m => m.Password, null, new {@class = "text-danger"})
 			</div>
 			<div class="checkbox">
 				<label>
@@ -30,7 +30,10 @@
 					Remember me
 				</label>
 			</div>
-			<button type="submit" class="btn btn-default">Login</button>
-  }
+			<button type="submit" class="btn btn-primary">Login</button>
+			<p class="help-block">
+				@Html.ActionLink("Register", "Registration") new user
+			</p>
+		}
 	</div>
 </div>

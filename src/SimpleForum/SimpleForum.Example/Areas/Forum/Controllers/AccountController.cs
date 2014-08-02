@@ -42,5 +42,11 @@ namespace SimpleForum.Web.Controllers
 			return View(model);
 		}
 
+		[HttpGet]
+	    public ActionResult Registration()
+		{
+			var model = new RegistrationModel();
+			return View(model);
+		}
     }
 }

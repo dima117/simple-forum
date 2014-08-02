@@ -129,6 +129,7 @@
     <Compile Include="ForumAreaRegistration.cs" />
     <Compile Include="Helpers\MarkdownHelper.cs" />
     <Compile Include="Models\Account\LoginModel.cs" />
+    <Compile Include="Models\Account\RegistrationModel.cs" />
     <Compile Include="Models\LastReplyModel.cs" />
     <Compile Include="Models\Forum\SectionsIndexModel.cs" />
     <Compile Include="Models\Forum\ForumIndexSectionModel.cs" />
@@ -165,6 +166,7 @@
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Write\Topic.cshtml" />
     <Content Include="Views\Write\Reply.cshtml" />
+    <Content Include="Views\Account\Registration.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
