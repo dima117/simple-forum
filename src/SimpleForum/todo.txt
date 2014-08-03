@@ -2,6 +2,7 @@
 - reply to
 - logged user
 - section sort order
++ registration
 
 - admin page
 	- new sections

@@ -1,5 +1,12 @@
 ﻿@model SimpleForum.Web.Models.Write.ReplyModel
 
+<ol class="breadcrumb">
+	<li>@Html.ActionLink("Forum", "Index", "Forum")</li>
+	<li>@Html.ActionLink(Model.SectionTitle, "Index", "Section", new { id = Model.SectionId }, null)</li>
+	<li>@Html.ActionLink(Model.TopicSubject, "Index", "Topic", new { id = Model.TopicId }, null)</li>
+	<li class="active">Post a reply</li>
+</ol>
+
 <h2>@Model.TopicSubject</h2>
 <hr />
 

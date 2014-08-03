@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace SimpleForum.Web.Models.Topic
 {
@@ -18,6 +16,10 @@ namespace SimpleForum.Web.Models.Topic
 		public Guid AuthorId { get; set; }
 
 		public string AuthorDisplayName { get; set; }
+
+		public Guid SectionId { get; set; }
+
+		public string SectionTitle { get; set; }
 
 		public List<TopicIndexReplyModel> Replies { get; set; } 
 	}

@@ -19,6 +19,7 @@ namespace SimpleForum.Web.Controllers
 
 				var model = new TopicModel
 				{
+					SectionId = section.Id,
 					SectionTitle = section.Title
 				};
 
@@ -36,6 +37,7 @@ namespace SimpleForum.Web.Controllers
 
 				if (!ModelState.IsValid)
 				{
+					model.SectionId = section.Id;
 					model.SectionTitle = section.Title;
 					return View(model);
 				}
@@ -65,10 +67,13 @@ namespace SimpleForum.Web.Controllers
 		{
 			using (var db = new SimpleForumDbContext())
 			{
-				var topic = db.Set<Topic>().Single(s => s.Id == id);
+				var topic = db.Set<Topic>().Include("Section").Single(s => s.Id == id);
 
 				var model = new ReplyModel
 				{
+					SectionId = topic.SectionId,
+					SectionTitle = topic.Section.Title,
+					TopicId = topic.Id,
 					TopicSubject = topic.Subject
 				};
 
@@ -82,11 +87,15 @@ namespace SimpleForum.Web.Controllers
 			using (var db = new SimpleForumDbContext())
 			{
 				var user = db.Users.Single(u => u.Email == User.Identity.Name);
-				var topic = db.Set<Topic>().Single(t => t.Id == id);
+				var topic = db.Set<Topic>().Include("Section").Single(t => t.Id == id);
 
 				if (!ModelState.IsValid)
 				{
+					model.SectionId = topic.SectionId;
+					model.SectionTitle = topic.Section.Title;
+					model.TopicId = topic.Id;
 					model.TopicSubject = topic.Subject;
+					
 					return View(model);
 				}
 
