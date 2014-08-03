@@ -12,6 +12,6 @@ namespace SimpleForum.Web.Models.Account
 		public string Password { get; set; }
 
 		public bool RememberMe { get; set; }
-		public bool HesError { get; set; }
+		public bool HasError { get; set; }
 	}
 }

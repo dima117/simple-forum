@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace SimpleForum.Domain.Model
 {
@@ -9,5 +10,8 @@ namespace SimpleForum.Domain.Model
 		public string Email { get; set; }
 
 		public string DisplayName { get; set; }
+
+		[StringLength(44)]
+		public string PasswordHash { get; set; }
 	}
 }

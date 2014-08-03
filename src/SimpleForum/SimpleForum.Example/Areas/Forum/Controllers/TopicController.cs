@@ -16,6 +16,7 @@ namespace SimpleForum.Web.Controllers
 			{
 				var topic = db.Set<Topic>().Include("Author").First(s => s.Id == id);
 				var replies = db.Set<Reply>()
+					.Include("Author")
 					.Where(r => r.TopicId == id)
 					.OrderBy(r => r.Created)
 					.ToList();
