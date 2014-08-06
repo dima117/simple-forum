@@ -167,6 +167,7 @@
     <Content Include="Views\Write\Topic.cshtml" />
     <Content Include="Views\Write\Reply.cshtml" />
     <Content Include="Views\Account\Registration.cshtml" />
+    <Content Include="SimpleForum.nuspec" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

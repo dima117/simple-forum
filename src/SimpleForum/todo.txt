@@ -1,9 +1,9 @@
-- breadcrumbs
-- reply to
 - logged user
 - section sort order
++ breadcrumbs
 + registration
 
+- reply to
 - admin page
 	- new sections
 	- sort sections

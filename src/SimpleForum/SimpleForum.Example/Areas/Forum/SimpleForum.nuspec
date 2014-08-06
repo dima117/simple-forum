@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<id>SimpleForum</id>
+		<version>0.1.0.0</version>
+		<title>Simple forum</title>
+		<authors>dima117</authors>
+		<owners>dima117</owners>
+		<licenseUrl>http://www.opensource.org/licenses/mit-license.php</licenseUrl>
+		<projectUrl>https://github.com/dima117/simple-forum</projectUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>A simple forum solution for ASP.NET MVC 4 applications.</description>
+		<language>en-US</language>
+		<dependencies>
+			<dependency id="AutoMapper" version="3.2.1" />
+			<dependency id="EntityFramework" version="6.1.1" />
+			<dependency id="MarkdownDeep.NET" version="1.5" />
+		</dependencies>
+	</metadata>
+	<files>
+
+		<file src="Views\Account\Login.cshtml" target="content\Areas\Forum\Views\Account\Login.cshtml" />
+		<file src="Views\Account\Registration.cshtml" target="content\Areas\Forum\Views\Account\Registration.cshtml" />
+		
+		<file src="Views\Forum\Index.cshtml" target="content\Areas\Forum\Views\Forum\Index.cshtml" />
+		<file src="Views\Section\Index.cshtml" target="content\Areas\Forum\Views\Section\Index.cshtml" />
+		<file src="Views\Topic\Index.cshtml" target="content\Areas\Forum\Views\Topic\Index.cshtml" />
+		<file src="Views\Shared\Message.cshtml" target="content\Areas\Forum\Views\Shared\Message.cshtml" />
+		<file src="Views\Write\Reply.cshtml" target="content\Areas\Forum\Views\Write\Reply.cshtml" />
+		<file src="Views\Write\Topic.cshtml" target="content\Areas\Forum\Views\Write\Topic.cshtml" />
+		<file src="Views\Web.config" target="content\Areas\Forum\Views\Web.config" />
+
+		<file src="..\..\bin\SimpleForum.Web.dll" target="lib\net45\SimpleForum.Web.dll" />
+		<file src="..\..\bin\SimpleForum.Domain.dll" target="lib\net45\SimpleForum.Domain.dll" />
+
+	</files>
+</package>
