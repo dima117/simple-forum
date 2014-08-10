@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 	<metadata>
 		<id>SimpleForum</id>
-		<version>0.2.0.0</version>
+		<version>0.2.1.0</version>
 		<title>Simple forum</title>
 		<authors>dima117</authors>
 		<owners>dima117</owners>
@@ -32,6 +32,8 @@
 
 		<file src="..\..\bin\SimpleForum.Web.dll" target="lib\net45\SimpleForum.Web.dll" />
 		<file src="..\..\bin\SimpleForum.Domain.dll" target="lib\net45\SimpleForum.Domain.dll" />
+		<file src="..\..\bin\ru-RU\SimpleForum.Web.resources.dll" 
+			  target="lib\net45\ru-RU\SimpleForum.Web.resources.dll" />
 
 	</files>
 </package>
