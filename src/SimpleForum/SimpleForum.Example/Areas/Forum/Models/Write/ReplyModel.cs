@@ -13,8 +13,9 @@ namespace SimpleForum.Web.Models.Write
 		public Guid TopicId { get; set; }
 		public string TopicSubject { get; set; }
 
-		[Required(ErrorMessageResourceType = typeof(ModelResources), ErrorMessageResourceName = "FieldIsRequired")]
 		[AllowHtml]
+		[Required(ErrorMessageResourceType = typeof(ModelResources), ErrorMessageResourceName = "FieldIsRequired")]
+		[Display(ResourceType = typeof(ModelResources), Name = "NewReplyText")]
 		public string Text { get; set; }
 	}
 }

@@ -132,6 +132,15 @@
   <data name="LoginRememberMe" xml:space="preserve">
     <value>Запомнить меня</value>
   </data>
+  <data name="NewReplyText" xml:space="preserve">
+    <value>Текст сообщения</value>
+  </data>
+  <data name="NewTopicSubject" xml:space="preserve">
+    <value>Заголовок</value>
+  </data>
+  <data name="NewTopicText" xml:space="preserve">
+    <value>Текст сообщения</value>
+  </data>
   <data name="RegistrationConfirmPassword" xml:space="preserve">
     <value>Подтверждение пароля</value>
   </data>

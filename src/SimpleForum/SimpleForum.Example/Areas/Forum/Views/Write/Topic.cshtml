@@ -4,13 +4,13 @@
 <ol class="breadcrumb">
 	<li>@Html.ActionLink(ModelResources.Forum, "Index", "Forum")</li>
 	<li>@Html.ActionLink(Model.SectionTitle, "Index", "Section", new { id = Model.SectionId }, null)</li>
-	<li class="active">Post a new topic</li>
+	<li class="active">@ViewResources.Topic_PostNewTopic</li>
 </ol>
 
 <h2>@Model.SectionTitle</h2>
 <hr />
 
-<h3>Post a new topic</h3>
+<h3>@ViewResources.Topic_PostNewTopic</h3>
 
 @using (Html.BeginForm())
 {
@@ -24,5 +24,5 @@
 		@Html.TextAreaFor(m => m.Text, new { @class = "form-control", rows = 7 })
 		@Html.ValidationMessageFor(m => m.Text)
 	</div>
-	<button type="submit" class="btn btn-primary">Submit</button>
+	<button type="submit" class="btn btn-primary">@ViewResources.Topic_Submit</button>
 }

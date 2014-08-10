@@ -12,10 +12,12 @@ namespace SimpleForum.Web.Models.Write
 
 		[Required(ErrorMessageResourceType = typeof(ModelResources), ErrorMessageResourceName = "FieldIsRequired")]
 		[StringLength(140)]
+		[Display(ResourceType = typeof(ModelResources), Name = "NewTopicSubject")]
 		public string Subject { get; set; }
 
-		[Required(ErrorMessageResourceType = typeof(ModelResources), ErrorMessageResourceName = "FieldIsRequired")]
 		[AllowHtml]
+		[Required(ErrorMessageResourceType = typeof(ModelResources), ErrorMessageResourceName = "FieldIsRequired")]
+		[Display(ResourceType = typeof(ModelResources), Name = "NewTopicText")]
 		public string Text { get; set; }
 	}
 }

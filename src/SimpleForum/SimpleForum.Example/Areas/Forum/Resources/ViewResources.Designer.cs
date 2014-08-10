@@ -250,6 +250,24 @@ namespace SimpleForum.Web.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Submit.
+        /// </summary>
+        public static string Reply_Submit {
+            get {
+                return ResourceManager.GetString("Reply_Submit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Post a reply.
+        /// </summary>
+        public static string Reply_Title {
+            get {
+                return ResourceManager.GetString("Reply_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to by.
         /// </summary>
         public static string Section_by {
@@ -313,11 +331,29 @@ namespace SimpleForum.Web.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Post a new topic.
+        /// </summary>
+        public static string Topic_PostNewTopic {
+            get {
+                return ResourceManager.GetString("Topic_PostNewTopic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Post a reply.
         /// </summary>
         public static string Topic_PostReply {
             get {
                 return ResourceManager.GetString("Topic_PostReply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Submit.
+        /// </summary>
+        public static string Topic_Submit {
+            get {
+                return ResourceManager.GetString("Topic_Submit", resourceCulture);
             }
         }
         

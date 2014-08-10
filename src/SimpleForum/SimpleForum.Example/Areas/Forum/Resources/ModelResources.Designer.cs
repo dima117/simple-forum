@@ -106,6 +106,33 @@ namespace SimpleForum.Web.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Text.
+        /// </summary>
+        public static string NewReplyText {
+            get {
+                return ResourceManager.GetString("NewReplyText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Subject.
+        /// </summary>
+        public static string NewTopicSubject {
+            get {
+                return ResourceManager.GetString("NewTopicSubject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text.
+        /// </summary>
+        public static string NewTopicText {
+            get {
+                return ResourceManager.GetString("NewTopicText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Confirm your password.
         /// </summary>
         public static string RegistrationConfirmPassword {

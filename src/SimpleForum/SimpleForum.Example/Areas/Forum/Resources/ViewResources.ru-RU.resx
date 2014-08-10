@@ -207,4 +207,16 @@
   <data name="Topic_Top" xml:space="preserve">
     <value>Наверх</value>
   </data>
+  <data name="Reply_Submit" xml:space="preserve">
+    <value>Отправить</value>
+  </data>
+  <data name="Reply_Title" xml:space="preserve">
+    <value>Написать сообщение</value>
+  </data>
+  <data name="Topic_PostNewTopic" xml:space="preserve">
+    <value>Новая тема</value>
+  </data>
+  <data name="Topic_Submit" xml:space="preserve">
+    <value>Отправить</value>
+  </data>
 </root>

@@ -207,4 +207,16 @@
   <data name="Topic_Top" xml:space="preserve">
     <value>Top</value>
   </data>
+  <data name="Reply_Submit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="Reply_Title" xml:space="preserve">
+    <value>Post a reply</value>
+  </data>
+  <data name="Topic_PostNewTopic" xml:space="preserve">
+    <value>Post a new topic</value>
+  </data>
+  <data name="Topic_Submit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
 </root>
