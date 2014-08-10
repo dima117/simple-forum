@@ -1,18 +1,22 @@
 ﻿@model SimpleForum.Web.Models.Account.LoginModel
 
+@{
+	ViewBag.Title = Resources.Login_cshtml.Login;
+}
+
 <ol class="breadcrumb">
   <li>@Html.ActionLink("Forum", "Index", "Forum")</li>
-  <li class="active">Login</li>
+  <li class="active">@Resources.Login_cshtml.Login</li>
 </ol>
 
-<h2>Login</h2>
+<h2>@Resources.Login_cshtml.Login</h2>
 <hr />
 <div class="row">
 	@if (Model.HasError)
 	{
 		<div class="alert alert-danger alert-dismissible" role="alert">
 			<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-			<strong>Warning!</strong> Login or password is invalid.
+			<strong>@Resources.Login_cshtml.Warning!</strong> @Resources.Login_cshtml.Login_or_password_is_invalid.
 		</div>
 	}
 
@@ -21,23 +25,23 @@
 		{
 			<div class="form-group">
 				@Html.LabelFor(m => m.Email)
-				@Html.TextBoxFor(m => m.Email, new {@class = "form-control", type = "email", placeholder = "example@example.com"})
+				@Html.TextBoxFor(m => m.Email, new {@class = "form-control", type = "email", placeholder = Resources.Login_cshtml.EmailPlaceholder})
 				@Html.ValidationMessageFor(m => m.Email, null, new {@class = "text-danger"})
 			</div>
 			<div class="form-group">
 				@Html.LabelFor(m => m.Password)
-				@Html.PasswordFor(m => m.Password, new {@class = "form-control", type = "password", placeholder = "your password"})
+				@Html.PasswordFor(m => m.Password, new {@class = "form-control", type = "password", placeholder = Resources.Login_cshtml.PasswordPlaceholder})
 				@Html.ValidationMessageFor(m => m.Password, null, new {@class = "text-danger"})
 			</div>
 			<div class="checkbox">
 				<label>
 					@Html.CheckBoxFor(m => m.RememberMe)
-					Remember me
+					@Resources.Login_cshtml.Remember_me
 				</label>
 			</div>
-			<button type="submit" class="btn btn-primary">Login</button>
+			<button type="submit" class="btn btn-primary">@Resources.Login_cshtml.LoginBtn</button>
 			<p class="help-block">
-				@Html.ActionLink("Register", "Registration") new user
+				@Html.ActionLink(Resources.Login_cshtml.Register, "Registration") @Resources.Login_cshtml.new_user
 			</p>
 		}
 	</div>
