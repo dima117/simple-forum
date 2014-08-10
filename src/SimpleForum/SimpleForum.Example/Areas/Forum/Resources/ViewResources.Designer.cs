@@ -239,5 +239,68 @@ namespace SimpleForum.Web.Resources {
                 return ResourceManager.GetString("Registration_Title", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to by.
+        /// </summary>
+        public static string Section_by {
+            get {
+                return ResourceManager.GetString("Section_by", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last reply.
+        /// </summary>
+        public static string Section_LastReply {
+            get {
+                return ResourceManager.GetString("Section_LastReply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No replies.
+        /// </summary>
+        public static string Section_NoReplies {
+            get {
+                return ResourceManager.GetString("Section_NoReplies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to on.
+        /// </summary>
+        public static string Section_on {
+            get {
+                return ResourceManager.GetString("Section_on", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Post a new topic.
+        /// </summary>
+        public static string Section_PostNewTopic {
+            get {
+                return ResourceManager.GetString("Section_PostNewTopic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Replies.
+        /// </summary>
+        public static string Section_Replies {
+            get {
+                return ResourceManager.GetString("Section_Replies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Topics.
+        /// </summary>
+        public static string Section_Topics {
+            get {
+                return ResourceManager.GetString("Section_Topics", resourceCulture);
+            }
+        }
     }
 }

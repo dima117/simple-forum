@@ -177,4 +177,25 @@
   <data name="Forum_Topics" xml:space="preserve">
     <value>Темы</value>
   </data>
+  <data name="Section_by" xml:space="preserve">
+    <value>от</value>
+  </data>
+  <data name="Section_LastReply" xml:space="preserve">
+    <value>Последнее сообщение</value>
+  </data>
+  <data name="Section_NoReplies" xml:space="preserve">
+    <value>Нет сообщений</value>
+  </data>
+  <data name="Section_on" xml:space="preserve">
+    <value>в</value>
+  </data>
+  <data name="Section_PostNewTopic" xml:space="preserve">
+    <value>Новая тема</value>
+  </data>
+  <data name="Section_Replies" xml:space="preserve">
+    <value>Сообщения</value>
+  </data>
+  <data name="Section_Topics" xml:space="preserve">
+    <value>Темы</value>
+  </data>
 </root>

@@ -10,7 +10,9 @@
 <hr />
 
 <p>
-	<a href="@Url.Action("Topic", "Write", new { id = Model.Id })" class="btn btn-primary">Post a new topic</a>
+	<a href="@Url.Action("Topic", "Write", new { id = Model.Id })" class="btn btn-primary">
+		@ViewResources.Section_PostNewTopic
+	</a>
 </p>
 <hr />
 
@@ -18,19 +20,19 @@
 	<colgroup>
 		<col style="width: 42px;" />
 		<col />
-		<col />
+		<col style="width: 12%;" />
 		<col style="width: 30%;" />
 	</colgroup>
 	<thead>
 		<tr>
-			<th colspan="2">Topics</th>
-			<th>Replies</th>
-			<th>Last reply</th>
+			<th colspan="2">@ViewResources.Section_Topics</th>
+			<th>@ViewResources.Section_Replies</th>
+			<th>@ViewResources.Section_LastReply</th>
 		</tr>
 	</thead>
 	<tbody>
 		@foreach (var topic in Model.Topics)
-  {
+		{
 			<tr>
 				<td>
 					<i class="fa fa-comments-o fa-2x text-muted"></i>
@@ -38,31 +40,33 @@
 				<td>
 					<a href="@Url.Action("Index", "Topic", new { id = topic.Id })">@topic.Subject</a>
 					<p>
-						by <a href="#">@topic.AuthorDisplayName</a>
-						on @topic.Created.ToShortDateString() @topic.Created.ToShortTimeString()
+						@ViewResources.Section_by <a href="#">@topic.AuthorDisplayName</a>
+						@ViewResources.Section_on @topic.Created.ToShortDateString(), @topic.Created.ToShortTimeString()
 					</p>
 				</td>
 				<td>@topic.ReplyCount.GetValueOrDefault()</td>
 				<td>
 					@if (topic.LastReply != null)
-	 {
+					{
 						<text>
-						by <a href="#">@topic.LastReply.AuthorDisplayName</a>
-						on @topic.LastReply.Created.ToShortDateString() @topic.LastReply.Created.ToShortTimeString()
+							@ViewResources.Section_by <a href="#">@topic.LastReply.AuthorDisplayName</a>
+							@ViewResources.Section_on @topic.LastReply.Created.ToShortDateString(), @topic.LastReply.Created.ToShortTimeString()
 						</text>
-	 }
-	 else
-	 {
-						<text>No replies</text>
-	 }
+					}
+					else
+					{
+						<text>@ViewResources.Section_NoReplies</text>
+					}
 				</td>
 			</tr>
-  }
+		}
 	</tbody>
 </table>
 <hr />
 
 <p>
-	<a href="@Url.Action("Topic", "Write", new { id = Model.Id })" class="btn btn-primary">Post a new topic</a>
+	<a href="@Url.Action("Topic", "Write", new { id = Model.Id })" class="btn btn-primary">
+		@ViewResources.Section_PostNewTopic
+	</a>
 </p>
 
