@@ -117,10 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Email" xml:space="preserve">
+  <data name="LoginEmail" xml:space="preserve">
     <value>Email address</value>
   </data>
-  <data name="Password" xml:space="preserve">
+  <data name="LoginPassword" xml:space="preserve">
     <value>Password</value>
+  </data>
+  <data name="LoginRememberMe" xml:space="preserve">
+    <value>Remember me</value>
+  </data>
+  <data name="RegistrationConfirmPassword" xml:space="preserve">
+    <value>Confirm your password</value>
+  </data>
+  <data name="RegistrationDisplayName" xml:space="preserve">
+    <value>Display name</value>
+  </data>
+  <data name="RegistrationEmail" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="RegistrationPassword" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="RegistrationPasswordMismatch" xml:space="preserve">
+    <value>Password and it confirmation do not match</value>
   </data>
 </root>

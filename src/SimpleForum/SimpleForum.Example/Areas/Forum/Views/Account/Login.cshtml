@@ -1,22 +1,24 @@
-﻿@model SimpleForum.Web.Models.Account.LoginModel
+﻿@using SimpleForum.Web.Resources
+
+@model SimpleForum.Web.Models.Account.LoginModel
 
 @{
-	ViewBag.Title = Resources.Login_cshtml.Login;
+	ViewBag.Title = ViewResources.Login_Title;
 }
 
 <ol class="breadcrumb">
   <li>@Html.ActionLink("Forum", "Index", "Forum")</li>
-  <li class="active">@Resources.Login_cshtml.Login</li>
+  <li class="active">@ViewResources.Login_Title</li>
 </ol>
 
-<h2>@Resources.Login_cshtml.Login</h2>
+<h2>@ViewResources.Login_Title</h2>
 <hr />
 <div class="row">
 	@if (Model.HasError)
 	{
 		<div class="alert alert-danger alert-dismissible" role="alert">
 			<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-			<strong>@Resources.Login_cshtml.Warning!</strong> @Resources.Login_cshtml.Login_or_password_is_invalid.
+			<strong>@ViewResources.Login_Warning!</strong> @ViewResources.Login_ErrorMessage.
 		</div>
 	}
 
@@ -25,23 +27,23 @@
 		{
 			<div class="form-group">
 				@Html.LabelFor(m => m.Email)
-				@Html.TextBoxFor(m => m.Email, new {@class = "form-control", type = "email", placeholder = Resources.Login_cshtml.EmailPlaceholder})
+				@Html.TextBoxFor(m => m.Email, new {@class = "form-control", type = "email", placeholder = ViewResources.Login_EmailPlaceholder})
 				@Html.ValidationMessageFor(m => m.Email, null, new {@class = "text-danger"})
 			</div>
 			<div class="form-group">
 				@Html.LabelFor(m => m.Password)
-				@Html.PasswordFor(m => m.Password, new {@class = "form-control", type = "password", placeholder = Resources.Login_cshtml.PasswordPlaceholder})
+				@Html.PasswordFor(m => m.Password, new {@class = "form-control", type = "password", placeholder = ViewResources.Login_PasswordPlaceholder})
 				@Html.ValidationMessageFor(m => m.Password, null, new {@class = "text-danger"})
 			</div>
 			<div class="checkbox">
 				<label>
 					@Html.CheckBoxFor(m => m.RememberMe)
-					@Resources.Login_cshtml.Remember_me
+					@ViewResources.Login_RememberMe
 				</label>
 			</div>
-			<button type="submit" class="btn btn-primary">@Resources.Login_cshtml.LoginBtn</button>
+			<button type="submit" class="btn btn-primary">@ViewResources.Login_BtnText</button>
 			<p class="help-block">
-				@Html.ActionLink(Resources.Login_cshtml.Register, "Registration") @Resources.Login_cshtml.new_user
+				@Html.ActionLink(ViewResources.Login_RegisterLink, "Registration") @ViewResources.Login_new_user
 			</p>
 		}
 	</div>

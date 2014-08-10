@@ -63,18 +63,72 @@ namespace SimpleForum.Web.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Email address.
         /// </summary>
-        public static string Email {
+        public static string LoginEmail {
             get {
-                return ResourceManager.GetString("Email", resourceCulture);
+                return ResourceManager.GetString("LoginEmail", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
-        public static string Password {
+        public static string LoginPassword {
             get {
-                return ResourceManager.GetString("Password", resourceCulture);
+                return ResourceManager.GetString("LoginPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remember me.
+        /// </summary>
+        public static string LoginRememberMe {
+            get {
+                return ResourceManager.GetString("LoginRememberMe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirm your password.
+        /// </summary>
+        public static string RegistrationConfirmPassword {
+            get {
+                return ResourceManager.GetString("RegistrationConfirmPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Display name.
+        /// </summary>
+        public static string RegistrationDisplayName {
+            get {
+                return ResourceManager.GetString("RegistrationDisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email.
+        /// </summary>
+        public static string RegistrationEmail {
+            get {
+                return ResourceManager.GetString("RegistrationEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        public static string RegistrationPassword {
+            get {
+                return ResourceManager.GetString("RegistrationPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password and it confirmation do not match.
+        /// </summary>
+        public static string RegistrationPasswordMismatch {
+            get {
+                return ResourceManager.GetString("RegistrationPasswordMismatch", resourceCulture);
             }
         }
     }

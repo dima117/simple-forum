@@ -1,11 +1,16 @@
-﻿@model SimpleForum.Web.Models.Account.RegistrationModel
+﻿@using SimpleForum.Web.Resources
+@model SimpleForum.Web.Models.Account.RegistrationModel
+
+@{
+	ViewBag.Title = ViewResources.Registration_Title;
+}
 
 <ol class="breadcrumb">
 	<li>@Html.ActionLink("Forum", "Index", "Forum")</li>
-	<li class="active">Registration</li>
+	<li class="active">@ViewResources.Registration_Title</li>
 </ol>
 
-<h2>Registration</h2>
+<h2>@ViewResources.Registration_Title</h2>
 <hr />
 <div class="row">
 
@@ -14,25 +19,25 @@
 		{
 			<div class="form-group">
 				@Html.LabelFor(m => m.DisplayName)
-				@Html.TextBoxFor(m => m.DisplayName, new { @class = "form-control", placeholder = "example: John Doe" })
+				@Html.TextBoxFor(m => m.DisplayName, new { @class = "form-control", placeholder = ViewResources.Registration_DisplayNamePlaceholder })
 				@Html.ValidationMessageFor(m => m.DisplayName, null, new { @class = "text-danger" })
 			</div>
 			<div class="form-group">
 				@Html.LabelFor(m => m.Email)
-				@Html.TextBoxFor(m => m.Email, new { @class = "form-control", type = "email", placeholder = "example: johndoe@example.com" })
+				@Html.TextBoxFor(m => m.Email, new { @class = "form-control", type = "email", placeholder = ViewResources.Registration_EmailPlaceholder })
 				@Html.ValidationMessageFor(m => m.Email, null, new { @class = "text-danger" })
 			</div>
 			<div class="form-group">
 				@Html.LabelFor(m => m.Password)
-				@Html.PasswordFor(m => m.Password, new { @class = "form-control", type = "password", placeholder = "your password" })
+				@Html.PasswordFor(m => m.Password, new { @class = "form-control", type = "password", placeholder = ViewResources.Registration_PasswordPlaceholder })
 				@Html.ValidationMessageFor(m => m.Password, null, new { @class = "text-danger" })
 			</div>
 			<div class="form-group">
 				@Html.LabelFor(m => m.ConfirmPassword)
-				@Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", type = "password", placeholder = "confirm password" })
+				@Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", type = "password", placeholder = ViewResources.Registration_ConfirmPasswordPlaceholder })
 				@Html.ValidationMessageFor(m => m.ConfirmPassword, null, new { @class = "text-danger" })
 			</div>
-			<button type="submit" class="btn btn-primary">Register</button>
+			<button type="submit" class="btn btn-primary">@ViewResources.Registration_RegisterBtnText</button>
 		}
 	</div>
 </div>

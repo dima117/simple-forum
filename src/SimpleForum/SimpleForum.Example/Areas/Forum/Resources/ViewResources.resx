@@ -117,31 +117,49 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="EmailPlaceholder" xml:space="preserve">
+  <data name="Login_BtnText" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Login_EmailPlaceholder" xml:space="preserve">
     <value>example@example.com</value>
   </data>
-  <data name="Login" xml:space="preserve">
-    <value>Вход</value>
+  <data name="Login_ErrorMessage" xml:space="preserve">
+    <value>Login or password is invalid</value>
   </data>
-  <data name="LoginBtn" xml:space="preserve">
-    <value>Войти</value>
+  <data name="Login_new_user" xml:space="preserve">
+    <value>new user</value>
   </data>
-  <data name="Login_or_password_is_invalid" xml:space="preserve">
-    <value>Имя пользователя или пароль указаны неправильно</value>
+  <data name="Login_PasswordPlaceholder" xml:space="preserve">
+    <value>your password</value>
   </data>
-  <data name="new_user" xml:space="preserve">
-    <value>как новый пользователь</value>
+  <data name="Login_RegisterLink" xml:space="preserve">
+    <value>Register</value>
   </data>
-  <data name="PasswordPlaceholder" xml:space="preserve">
-    <value>введите пароль</value>
+  <data name="Login_RememberMe" xml:space="preserve">
+    <value>Remember me</value>
   </data>
-  <data name="Register" xml:space="preserve">
-    <value>Зарегистрироваться</value>
+  <data name="Login_Title" xml:space="preserve">
+    <value>Login</value>
   </data>
-  <data name="Remember_me" xml:space="preserve">
-    <value>Запомнить меня</value>
+  <data name="Login_Warning" xml:space="preserve">
+    <value>Warning</value>
   </data>
-  <data name="Warning" xml:space="preserve">
-    <value>Внимание</value>
+  <data name="Registration_ConfirmPasswordPlaceholder" xml:space="preserve">
+    <value>confirm password</value>
+  </data>
+  <data name="Registration_DisplayNamePlaceholder" xml:space="preserve">
+    <value>example: John Doe</value>
+  </data>
+  <data name="Registration_EmailPlaceholder" xml:space="preserve">
+    <value>example: johndoe@example.com</value>
+  </data>
+  <data name="Registration_PasswordPlaceholder" xml:space="preserve">
+    <value>your password</value>
+  </data>
+  <data name="Registration_RegisterBtnText" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="Registration_Title" xml:space="preserve">
+    <value>Registration</value>
   </data>
 </root>

@@ -35,7 +35,16 @@ namespace SimpleForum.Web.Controllers
 
 					if (user != null)
 					{
-						FormsAuthentication.RedirectFromLoginPage(user.Email, model.RememberMe);
+						FormsAuthentication.SetAuthCookie(user.Email, false);
+						
+						var url = FormsAuthentication.GetRedirectUrl(user.Email, model.RememberMe);
+
+						if (url != FormsAuthentication.DefaultUrl)
+						{
+							return Redirect(url);
+						}
+						
+						return RedirectToAction("Index", "Forum");
 					}
 
 					model.HasError = true;

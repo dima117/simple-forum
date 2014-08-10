@@ -146,10 +146,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model.resx</DependentUpon>
     </Compile>
-    <Compile Include="Views\Account\App_LocalResources\Login.cshtml.Designer.cs">
+    <Compile Include="Resources\ViewResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Login.cshtml.resx</DependentUpon>
+      <DependentUpon>ViewResources.resx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -162,11 +162,11 @@
       <LastGenOutput>Model.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Model.ru-RU.resx" />
-    <EmbeddedResource Include="Views\Account\App_LocalResources\Login.cshtml.resx">
+    <EmbeddedResource Include="Resources\ViewResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Login.cshtml.Designer.cs</LastGenOutput>
-      <CustomToolNamespace>Resources</CustomToolNamespace>
+      <LastGenOutput>ViewResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ViewResources.ru-RU.resx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -196,9 +196,6 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Views\Account\App_LocalResources\Login.cshtml.ru-RU.resx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
