@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 	<metadata>
 		<id>SimpleForum</id>
-		<version>0.1.0.0</version>
+		<version>0.2.0.0</version>
 		<title>Simple forum</title>
 		<authors>dima117</authors>
 		<owners>dima117</owners>
