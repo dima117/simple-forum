@@ -61,6 +61,69 @@ namespace SimpleForum.Web.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to by.
+        /// </summary>
+        public static string Forum_by {
+            get {
+                return ResourceManager.GetString("Forum_by", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to in.
+        /// </summary>
+        public static string Forum_in {
+            get {
+                return ResourceManager.GetString("Forum_in", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last reply.
+        /// </summary>
+        public static string Forum_LastReply {
+            get {
+                return ResourceManager.GetString("Forum_LastReply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No replies.
+        /// </summary>
+        public static string Forum_NoReplies {
+            get {
+                return ResourceManager.GetString("Forum_NoReplies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to on.
+        /// </summary>
+        public static string Forum_on {
+            get {
+                return ResourceManager.GetString("Forum_on", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Replies.
+        /// </summary>
+        public static string Forum_Replies {
+            get {
+                return ResourceManager.GetString("Forum_Replies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Topics.
+        /// </summary>
+        public static string Forum_Topics {
+            get {
+                return ResourceManager.GetString("Forum_Topics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Login.
         /// </summary>
         public static string Login_BtnText {

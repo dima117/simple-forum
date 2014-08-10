@@ -5,23 +5,23 @@
   <li class="active">@ModelResources.Forum</li>
 </ol>
 
-<h2>Simple forum</h2>
+<h2>@ModelResources.Forum</h2>
 <hr />
 
 <table class="table">
 	<colgroup>
 		<col style="width: 42px;" />
 		<col />
-		<col />
-		<col />
+		<col style="width: 8%;" />
+		<col style="width: 12%;" />
 		<col style="width: 30%;" />
 	</colgroup>
 	<thead>
 		<tr>
 			<th colspan="2"></th>
-			<th>Topics</th>
-			<th>Replies</th>
-			<th>Last reply</th>
+			<th>@ViewResources.Forum_Topics</th>
+			<th>@ViewResources.Forum_Replies</th>
+			<th>@ViewResources.Forum_LastReply</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -41,14 +41,14 @@
 					@if (sectionModel.LastReply != null)
 					{
 						<text>
-							by <a href="#">@sectionModel.LastReply.AuthorDisplayName</a>
-							in <a href="@Url.Action("Index", "Topic", new { id = sectionModel.LastReply.TopicId })">@sectionModel.LastReply.TopicSubject</a>
-							on @sectionModel.LastReply.Created.ToShortDateString() @sectionModel.LastReply.Created.ToShortTimeString()
+							@ViewResources.Forum_by <a href="#">@sectionModel.LastReply.AuthorDisplayName</a>
+							@ViewResources.Forum_in <a href="@Url.Action("Index", "Topic", new { id = sectionModel.LastReply.TopicId })">@sectionModel.LastReply.TopicSubject</a>
+							@ViewResources.Forum_on @sectionModel.LastReply.Created.ToShortDateString(), @sectionModel.LastReply.Created.ToShortTimeString()
 						</text>
 					}
 					else
 					{
-						<text>No replies</text>
+						<text>@ViewResources.Forum_NoReplies</text>
 					}
 				</td>
 			</tr>

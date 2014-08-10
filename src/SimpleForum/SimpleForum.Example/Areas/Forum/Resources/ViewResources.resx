@@ -156,4 +156,25 @@
   <data name="Registration_Title" xml:space="preserve">
     <value>Registration</value>
   </data>
+  <data name="Forum_by" xml:space="preserve">
+    <value>by</value>
+  </data>
+  <data name="Forum_in" xml:space="preserve">
+    <value>in</value>
+  </data>
+  <data name="Forum_LastReply" xml:space="preserve">
+    <value>Last reply</value>
+  </data>
+  <data name="Forum_NoReplies" xml:space="preserve">
+    <value>No replies</value>
+  </data>
+  <data name="Forum_on" xml:space="preserve">
+    <value>on</value>
+  </data>
+  <data name="Forum_Replies" xml:space="preserve">
+    <value>Replies</value>
+  </data>
+  <data name="Forum_Topics" xml:space="preserve">
+    <value>Topics</value>
+  </data>
 </root>

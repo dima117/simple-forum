@@ -156,4 +156,25 @@
   <data name="Registration_Title" xml:space="preserve">
     <value>Регистрация</value>
   </data>
+  <data name="Forum_by" xml:space="preserve">
+    <value>от</value>
+  </data>
+  <data name="Forum_in" xml:space="preserve">
+    <value>в теме</value>
+  </data>
+  <data name="Forum_LastReply" xml:space="preserve">
+    <value>Последнее сообщение</value>
+  </data>
+  <data name="Forum_NoReplies" xml:space="preserve">
+    <value>Нет сообщений</value>
+  </data>
+  <data name="Forum_on" xml:space="preserve">
+    <value>в</value>
+  </data>
+  <data name="Forum_Replies" xml:space="preserve">
+    <value>Сообщения</value>
+  </data>
+  <data name="Forum_Topics" xml:space="preserve">
+    <value>Темы</value>
+  </data>
 </root>
