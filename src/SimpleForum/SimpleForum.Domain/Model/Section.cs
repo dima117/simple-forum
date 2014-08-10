@@ -11,6 +11,8 @@ namespace SimpleForum.Domain.Model
 
 		public string Description { get; set; }
 
+		public int SortOrder { get; set; }
+
 		public ICollection<Topic> Topics { get; set; }
 	}
 }

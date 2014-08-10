@@ -15,13 +15,13 @@ namespace SimpleForum.Domain
 		{
 		}
 
-		      protected override void OnModelCreating( DbModelBuilder modelBuilder )
-      {
+		protected override void OnModelCreating(DbModelBuilder modelBuilder)
+		{
 
-         modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+			modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
 
 
-      }
+		}
 
 		public DbSet<User> Users { get; set; }
 		public DbSet<Reply> Replies { get; set; }
@@ -31,6 +31,7 @@ namespace SimpleForum.Domain
 		public List<SectionDto> GetSections()
 		{
 			var sections = Sections
+						.OrderBy(s => s.SortOrder)
 						.Select(s => new SectionDto
 						{
 							Id = s.Id,

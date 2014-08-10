@@ -1,11 +1,11 @@
 - logged user
-- section sort order
++ section sort order
 + breadcrumbs
 + registration
++ localization
 
 - reply to
-- admin page
+- admin page 
 	- new sections
 	- sort sections
 - subscriptions
-- localization
