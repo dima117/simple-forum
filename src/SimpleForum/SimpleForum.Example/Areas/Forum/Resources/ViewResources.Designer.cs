@@ -187,6 +187,15 @@ namespace SimpleForum.Web.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to on.
+        /// </summary>
+        public static string Message_on {
+            get {
+                return ResourceManager.GetString("Message_on", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to confirm password.
         /// </summary>
         public static string Registration_ConfirmPasswordPlaceholder {
@@ -300,6 +309,24 @@ namespace SimpleForum.Web.Resources {
         public static string Section_Topics {
             get {
                 return ResourceManager.GetString("Section_Topics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Post a reply.
+        /// </summary>
+        public static string Topic_PostReply {
+            get {
+                return ResourceManager.GetString("Topic_PostReply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Top.
+        /// </summary>
+        public static string Topic_Top {
+            get {
+                return ResourceManager.GetString("Topic_Top", resourceCulture);
             }
         }
     }

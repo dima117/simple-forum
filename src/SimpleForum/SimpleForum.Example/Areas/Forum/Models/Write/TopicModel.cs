@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 using SimpleForum.Web.Resources;
 
 namespace SimpleForum.Web.Models.Write
@@ -14,6 +15,7 @@ namespace SimpleForum.Web.Models.Write
 		public string Subject { get; set; }
 
 		[Required(ErrorMessageResourceType = typeof(ModelResources), ErrorMessageResourceName = "FieldIsRequired")]
+		[AllowHtml]
 		public string Text { get; set; }
 	}
 }

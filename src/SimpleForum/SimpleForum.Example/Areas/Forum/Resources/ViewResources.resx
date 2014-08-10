@@ -198,4 +198,13 @@
   <data name="Section_Topics" xml:space="preserve">
     <value>Topics</value>
   </data>
+  <data name="Message_on" xml:space="preserve">
+    <value>on</value>
+  </data>
+  <data name="Topic_PostReply" xml:space="preserve">
+    <value>Post a reply</value>
+  </data>
+  <data name="Topic_Top" xml:space="preserve">
+    <value>Top</value>
+  </data>
 </root>

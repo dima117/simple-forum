@@ -198,4 +198,13 @@
   <data name="Section_Topics" xml:space="preserve">
     <value>Темы</value>
   </data>
+  <data name="Message_on" xml:space="preserve">
+    <value>в</value>
+  </data>
+  <data name="Topic_PostReply" xml:space="preserve">
+    <value>Написать сообщение</value>
+  </data>
+  <data name="Topic_Top" xml:space="preserve">
+    <value>Наверх</value>
+  </data>
 </root>

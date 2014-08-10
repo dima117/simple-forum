@@ -15,7 +15,9 @@ namespace SimpleForum.Web.Helpers
 		static readonly Markdown markdownTransformer = new Markdown
 		{
 			NewWindowForExternalLinks = true,
-			NoFollowLinks = true
+			NoFollowLinks = true,
+			MarkdownInHtml = true,
+			ExtraMode = true
 		};
 
 		/// <summary>

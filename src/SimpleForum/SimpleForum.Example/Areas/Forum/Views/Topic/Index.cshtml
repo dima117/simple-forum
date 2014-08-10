@@ -12,7 +12,7 @@
 <h2>@Model.Subject</h2>
 <hr />
 <p>
-	<a href="@Url.Action("Reply", "Write", new { id = Model.Id })" class="btn btn-primary">Post a reply</a>
+	<a href="@Url.Action("Reply", "Write", new { id = Model.Id })" class="btn btn-primary">@ViewResources.Topic_PostReply</a>
 </p>
 <hr />
 
@@ -23,11 +23,11 @@
 {
 	@Html.Partial("Message", reply)
 	<p class="clearfix">
-		<a class="btn btn-info btn-xs pull-right" href="#top">Top</a>
+		<a class="btn btn-info btn-xs pull-right" href="#top">@ViewResources.Topic_Top</a>
 	</p>
 	<hr />
 }
 
 <p>
-	<a href="@Url.Action("Reply", "Write", new { id = Model.Id })" class="btn btn-primary">Post a reply</a>
+	<a href="@Url.Action("Reply", "Write", new { id = Model.Id })" class="btn btn-primary">@ViewResources.Topic_PostReply</a>
 </p>
