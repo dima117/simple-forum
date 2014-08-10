@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using SimpleForum.Web.Resources;
 
 namespace SimpleForum.Web.Models.Write
 {
@@ -11,7 +12,7 @@ namespace SimpleForum.Web.Models.Write
 		public Guid TopicId { get; set; }
 		public string TopicSubject { get; set; }
 
-		[Required]
+		[Required(ErrorMessageResourceType = typeof(ModelResources), ErrorMessageResourceName = "FieldIsRequired")]
 		public string Text { get; set; }
 	}
 }
