@@ -7,8 +7,8 @@
 }
 
 <ol class="breadcrumb">
-  <li>@Html.ActionLink("Forum", "Index", "Forum")</li>
-  <li class="active">@ViewResources.Login_Title</li>
+	<li>@Html.ActionLink(ModelResources.Forum, "Index", "Forum")</li>
+	<li class="active">@ViewResources.Login_Title</li>
 </ol>
 
 <h2>@ViewResources.Login_Title</h2>
@@ -27,13 +27,13 @@
 		{
 			<div class="form-group">
 				@Html.LabelFor(m => m.Email)
-				@Html.TextBoxFor(m => m.Email, new {@class = "form-control", type = "email", placeholder = ViewResources.Login_EmailPlaceholder})
-				@Html.ValidationMessageFor(m => m.Email, null, new {@class = "text-danger"})
+				@Html.TextBoxFor(m => m.Email, new { @class = "form-control", type = "email" })
+				@Html.ValidationMessageFor(m => m.Email, null, new { @class = "text-danger" })
 			</div>
 			<div class="form-group">
 				@Html.LabelFor(m => m.Password)
-				@Html.PasswordFor(m => m.Password, new {@class = "form-control", type = "password", placeholder = ViewResources.Login_PasswordPlaceholder})
-				@Html.ValidationMessageFor(m => m.Password, null, new {@class = "text-danger"})
+				@Html.PasswordFor(m => m.Password, new { @class = "form-control", type = "password" })
+				@Html.ValidationMessageFor(m => m.Password, null, new { @class = "text-danger" })
 			</div>
 			<div class="checkbox">
 				<label>

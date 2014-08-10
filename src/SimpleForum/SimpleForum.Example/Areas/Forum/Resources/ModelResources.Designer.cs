@@ -22,14 +22,14 @@ namespace SimpleForum.Web.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Model {
+    public class ModelResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Model() {
+        internal ModelResources() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace SimpleForum.Web.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SimpleForum.Web.Resources.Model", typeof(Model).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SimpleForum.Web.Resources.ModelResources", typeof(ModelResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,6 +57,15 @@ namespace SimpleForum.Web.Resources {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Forum.
+        /// </summary>
+        public static string Forum {
+            get {
+                return ResourceManager.GetString("Forum", resourceCulture);
             }
         }
         

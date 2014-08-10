@@ -1,7 +1,8 @@
-﻿@model SimpleForum.Web.Models.Write.TopicModel
+﻿@using SimpleForum.Web.Resources
+@model SimpleForum.Web.Models.Write.TopicModel
 
 <ol class="breadcrumb">
-	<li>@Html.ActionLink("Forum", "Index", "Forum")</li>
+	<li>@Html.ActionLink(ModelResources.Forum, "Index", "Forum")</li>
 	<li>@Html.ActionLink(Model.SectionTitle, "Index", "Section", new { id = Model.SectionId }, null)</li>
 	<li class="active">Post a new topic</li>
 </ol>

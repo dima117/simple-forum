@@ -70,15 +70,6 @@ namespace SimpleForum.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to example@example.com.
-        /// </summary>
-        public static string Login_EmailPlaceholder {
-            get {
-                return ResourceManager.GetString("Login_EmailPlaceholder", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Login or password is invalid.
         /// </summary>
         public static string Login_ErrorMessage {
@@ -93,15 +84,6 @@ namespace SimpleForum.Web.Resources {
         public static string Login_new_user {
             get {
                 return ResourceManager.GetString("Login_new_user", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to your password.
-        /// </summary>
-        public static string Login_PasswordPlaceholder {
-            get {
-                return ResourceManager.GetString("Login_PasswordPlaceholder", resourceCulture);
             }
         }
         

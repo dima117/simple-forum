@@ -1,7 +1,8 @@
-﻿@model SimpleForum.Web.Models.Section.SectionIndexModel
+﻿@using SimpleForum.Web.Resources
+@model SimpleForum.Web.Models.Section.SectionIndexModel
 
 <ol class="breadcrumb">
-  <li>@Html.ActionLink("Forum", "Index", "Forum")</li>
+  <li>@Html.ActionLink(ModelResources.Forum, "Index", "Forum")</li>
   <li class="active">@Model.Title</li>
 </ol>
 

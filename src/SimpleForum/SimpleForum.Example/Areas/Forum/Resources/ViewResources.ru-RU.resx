@@ -120,17 +120,11 @@
   <data name="Login_BtnText" xml:space="preserve">
     <value>Войти</value>
   </data>
-  <data name="Login_EmailPlaceholder" xml:space="preserve">
-    <value>example@example.com</value>
-  </data>
   <data name="Login_ErrorMessage" xml:space="preserve">
     <value>Имя пользователя или пароль указаны неправильно</value>
   </data>
   <data name="Login_new_user" xml:space="preserve">
     <value>как новый пользователь</value>
-  </data>
-  <data name="Login_PasswordPlaceholder" xml:space="preserve">
-    <value>придумайте пароль</value>
   </data>
   <data name="Login_RegisterLink" xml:space="preserve">
     <value>Зарегистрироваться</value>

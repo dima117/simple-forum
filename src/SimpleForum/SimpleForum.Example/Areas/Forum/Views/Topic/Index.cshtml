@@ -1,9 +1,10 @@
-﻿@model SimpleForum.Web.Models.Topic.TopicIndexModel
+﻿@using SimpleForum.Web.Resources
+@model SimpleForum.Web.Models.Topic.TopicIndexModel
 
 <div id="top"></div>
 
 <ol class="breadcrumb">
-	<li>@Html.ActionLink("Forum", "Index", "Forum")</li>
+	<li>@Html.ActionLink(ModelResources.Forum, "Index", "Forum")</li>
 	<li>@Html.ActionLink(Model.SectionTitle, "Index", "Section", new { id = Model.SectionId }, null)</li>
 	<li class="active">@Model.Subject</li>
 </ol>
