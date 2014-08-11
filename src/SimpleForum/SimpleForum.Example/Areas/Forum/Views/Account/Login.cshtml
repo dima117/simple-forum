@@ -11,6 +11,10 @@
 	<li class="active">@ViewResources.Login_Title</li>
 </ol>
 
+<div class="pull-right">
+	@{ Html.RenderAction("UserInfo", "Account");}
+</div>
+
 <h2>@ViewResources.Login_Title</h2>
 <hr />
 <div class="row">

@@ -154,7 +154,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\simpleforum.css" />
     <Content Include="readme.txt" />
     <Content Include="Views\Web.config" />
   </ItemGroup>
@@ -167,6 +166,7 @@
     <EmbeddedResource Include="Resources\ViewResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ViewResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\ViewResources.ru-RU.resx" />
   </ItemGroup>

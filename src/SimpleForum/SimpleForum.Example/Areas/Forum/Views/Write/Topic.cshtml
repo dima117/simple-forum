@@ -7,6 +7,10 @@
 	<li class="active">@ViewResources.Topic_PostNewTopic</li>
 </ol>
 
+<div class="pull-right">
+	@{ Html.RenderAction("UserInfo", "Account");}
+</div>
+
 <h2>@Model.SectionTitle</h2>
 <hr />
 

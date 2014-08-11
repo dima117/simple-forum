@@ -1,13 +1,12 @@
 ﻿@using SimpleForum.Web.Resources
 @model SimpleForum.Web.Models.Forum.ForumIndexModel
 
-<link rel="stylesheet" href="@Url.Content("~/areas/forum/Content/simpleforum.css")"/>
-
 <ol class="breadcrumb">
 	<li class="active">@ModelResources.Forum</li>
-
-	<li class="f-user-label pull-right">@{ Html.RenderAction("UserInfo", "Account");}</li>
 </ol>
+<div class="pull-right">
+	@{ Html.RenderAction("UserInfo", "Account");}
+</div>
 
 <h2>@ModelResources.Forum</h2>
 <hr />
@@ -45,9 +44,9 @@
 					@if (sectionModel.LastReply != null)
 					{
 						<text>
-						@ViewResources.Forum_by <a href="#">@sectionModel.LastReply.AuthorDisplayName</a>
-						@ViewResources.Forum_in <a href="@Url.Action("Index", "Topic", new { id = sectionModel.LastReply.TopicId })">@sectionModel.LastReply.TopicSubject</a>
-						@ViewResources.Forum_on @sectionModel.LastReply.Created.ToShortDateString(), @sectionModel.LastReply.Created.ToShortTimeString()
+							@ViewResources.Forum_by <a href="#">@sectionModel.LastReply.AuthorDisplayName</a>
+							@ViewResources.Forum_in <a href="@Url.Action("Index", "Topic", new { id = sectionModel.LastReply.TopicId })">@sectionModel.LastReply.TopicSubject</a>
+							@ViewResources.Forum_on @sectionModel.LastReply.Created.ToShortTimeString(), @sectionModel.LastReply.Created.ToShortDateString()
 						</text>
 					}
 					else

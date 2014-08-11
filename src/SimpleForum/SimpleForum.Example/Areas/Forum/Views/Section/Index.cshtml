@@ -2,9 +2,13 @@
 @model SimpleForum.Web.Models.Section.SectionIndexModel
 
 <ol class="breadcrumb">
-  <li>@Html.ActionLink(ModelResources.Forum, "Index", "Forum")</li>
-  <li class="active">@Model.Title</li>
+	<li>@Html.ActionLink(ModelResources.Forum, "Index", "Forum")</li>
+	<li class="active">@Model.Title</li>
 </ol>
+
+<div class="pull-right">
+	@{ Html.RenderAction("UserInfo", "Account");}
+</div>
 
 <h2>@Model.Title</h2>
 <hr />
@@ -41,7 +45,7 @@
 					<a href="@Url.Action("Index", "Topic", new { id = topic.Id })">@topic.Subject</a>
 					<p>
 						@ViewResources.Section_by <a href="#">@topic.AuthorDisplayName</a>
-						@ViewResources.Section_on @topic.Created.ToShortDateString(), @topic.Created.ToShortTimeString()
+						@ViewResources.Section_on @topic.Created.ToShortTimeString(), @topic.Created.ToShortDateString()
 					</p>
 				</td>
 				<td>@topic.ReplyCount.GetValueOrDefault()</td>
@@ -50,7 +54,7 @@
 					{
 						<text>
 							@ViewResources.Section_by <a href="#">@topic.LastReply.AuthorDisplayName</a>
-							@ViewResources.Section_on @topic.LastReply.Created.ToShortDateString(), @topic.LastReply.Created.ToShortTimeString()
+							@ViewResources.Section_on @topic.LastReply.Created.ToShortTimeString(), @topic.LastReply.Created.ToShortDateString()
 						</text>
 					}
 					else

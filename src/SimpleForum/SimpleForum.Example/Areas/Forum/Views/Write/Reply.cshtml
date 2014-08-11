@@ -8,6 +8,10 @@
 	<li class="active">@ViewResources.Reply_Title</li>
 </ol>
 
+<div class="pull-right">
+	@{ Html.RenderAction("UserInfo", "Account");}
+</div>
+
 <h2>@Model.TopicSubject</h2>
 <hr />
 
