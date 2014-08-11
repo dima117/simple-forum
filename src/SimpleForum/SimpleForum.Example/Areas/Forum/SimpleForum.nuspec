@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 	<metadata>
 		<id>SimpleForum</id>
-		<version>0.4.0.0</version>
+		<version>0.4.1.0</version>
 		<title>Simple forum</title>
 		<authors>dima117</authors>
 		<owners>dima117</owners>
@@ -21,6 +21,7 @@
 
 		<file src="Views\Account\Login.cshtml" target="content\Areas\Forum\Views\Account\Login.cshtml" />
 		<file src="Views\Account\Registration.cshtml" target="content\Areas\Forum\Views\Account\Registration.cshtml" />
+		<file src="Views\Account\UserInfo.cshtml" target="content\Areas\Forum\Views\Account\UserInfo.cshtml" />
 		
 		<file src="Views\Forum\Index.cshtml" target="content\Areas\Forum\Views\Forum\Index.cshtml" />
 		<file src="Views\Section\Index.cshtml" target="content\Areas\Forum\Views\Section\Index.cshtml" />
