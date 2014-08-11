@@ -1,0 +1,12 @@
+﻿@model SimpleForum.Web.Models.Account.UserInfoModel
+
+@if (Model == null)
+{
+	 @Html.ActionLink("Login", "Login", "Account")
+	 @:/
+	 @Html.ActionLink("Registration", "Registration", "Account") 
+}
+else
+{
+	@Model.DisplayName @:/ @Html.ActionLink("Logout", "Logout", "Account")
+} 

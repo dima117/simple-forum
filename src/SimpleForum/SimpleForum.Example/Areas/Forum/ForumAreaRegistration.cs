@@ -26,7 +26,7 @@ namespace SimpleForum.Web
 		{
 			InitDatabase();
 			InitModelMapping();
-
+			
 			context.MapRoute(
 				"Forum_default",
 				"forum/{controller}/{action}/{id}",

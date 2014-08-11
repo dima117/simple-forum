@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Web.Caching;
 using System.Web.Mvc;
 using System.Web.Security;
 using SimpleForum.Domain;
@@ -10,17 +11,17 @@ using SimpleForum.Web.Models.Account;
 
 namespace SimpleForum.Web.Controllers
 {
-    public class AccountController : Controller
-    {
-        //
-        // GET: /Account/
+	public class AccountController : Controller
+	{
+		//
+		// GET: /Account/
 
 		[HttpGet]
-        public ActionResult Login()
-        {
-	        var model = new LoginModel();
+		public ActionResult Login()
+		{
+			var model = new LoginModel();
 			return View(model);
-        }
+		}
 
 		[HttpPost]
 		public ActionResult Login(LoginModel model)
@@ -36,14 +37,14 @@ namespace SimpleForum.Web.Controllers
 					if (user != null)
 					{
 						FormsAuthentication.SetAuthCookie(user.Email, false);
-						
+
 						var url = FormsAuthentication.GetRedirectUrl(user.Email, model.RememberMe);
 
 						if (url != FormsAuthentication.DefaultUrl)
 						{
 							return Redirect(url);
 						}
-						
+
 						return RedirectToAction("Index", "Forum");
 					}
 
@@ -55,7 +56,7 @@ namespace SimpleForum.Web.Controllers
 		}
 
 		[HttpGet]
-	    public ActionResult Registration()
+		public ActionResult Registration()
 		{
 			var model = new RegistrationModel();
 			return View(model);
@@ -98,13 +99,13 @@ namespace SimpleForum.Web.Controllers
 		}
 
 		public ActionResult IsEmailAvailable(string email)
-	    {
-		    using (var db = new SimpleForumDbContext())
-		    {
+		{
+			using (var db = new SimpleForumDbContext())
+			{
 				var isAvailable = !db.Users.Any(u => u.Email == email);
 				return Json(isAvailable, JsonRequestBehavior.AllowGet);
-		    }
-	    }
+			}
+		}
 
 		static string GetPasswordHash(string email, string password)
 		{
@@ -118,5 +119,40 @@ namespace SimpleForum.Web.Controllers
 				return Convert.ToBase64String(hashBytes);
 			}
 		}
-    }
+
+		public ActionResult UserInfo()
+	    {
+		    UserInfoModel model = null;
+
+		    if (User.Identity.IsAuthenticated)
+		    {
+			    var email = User.Identity.Name;
+
+			    string key = "5669B56F-48B6-4AED-8564-F549A3BC36FA-" + email;
+
+			    model = HttpContext.Cache[key] as UserInfoModel;
+			    
+				if (model == null)
+			    {
+				    using (var db = new SimpleForumDbContext())
+				    {
+					    var user = db.Users
+						    .First(u => u.Email.Equals(email, StringComparison.InvariantCultureIgnoreCase));
+
+						model = new UserInfoModel{DisplayName = user.DisplayName};
+					    HttpContext.Cache.Add(key, model, null, Cache.NoAbsoluteExpiration, TimeSpan.FromMinutes(5),
+						    CacheItemPriority.Default, null);
+				    }
+			    }
+		    }
+
+			return PartialView(model);
+	    }
+
+		public ActionResult Logout()
+		{
+			FormsAuthentication.SignOut();
+			return RedirectToAction("Index", "Forum");
+		}
+	}
 }

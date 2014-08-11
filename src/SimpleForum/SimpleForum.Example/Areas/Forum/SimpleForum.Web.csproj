@@ -130,6 +130,7 @@
     <Compile Include="Helpers\MarkdownHelper.cs" />
     <Compile Include="Models\Account\LoginModel.cs" />
     <Compile Include="Models\Account\RegistrationModel.cs" />
+    <Compile Include="Models\Account\UserInfoModel.cs" />
     <Compile Include="Models\LastReplyModel.cs" />
     <Compile Include="Models\Forum\SectionsIndexModel.cs" />
     <Compile Include="Models\Forum\ForumIndexSectionModel.cs" />
@@ -153,6 +154,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\simpleforum.css" />
     <Content Include="readme.txt" />
     <Content Include="Views\Web.config" />
   </ItemGroup>
@@ -190,6 +192,7 @@
     <Content Include="Views\Write\Reply.cshtml" />
     <Content Include="Views\Account\Registration.cshtml" />
     <Content Include="SimpleForum.nuspec" />
+    <Content Include="Views\Account\UserInfo.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
