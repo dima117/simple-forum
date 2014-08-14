@@ -219,4 +219,13 @@
   <data name="Topic_Submit" xml:space="preserve">
     <value>Отправить</value>
   </data>
+  <data name="UserInfo_LoginLink" xml:space="preserve">
+    <value>Вход</value>
+  </data>
+  <data name="UserInfo_LogoutLink" xml:space="preserve">
+    <value>Выход</value>
+  </data>
+  <data name="UserInfo_Registration" xml:space="preserve">
+    <value>Регистрация</value>
+  </data>
 </root>

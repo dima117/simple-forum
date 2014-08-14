@@ -365,5 +365,32 @@ namespace SimpleForum.Web.Resources {
                 return ResourceManager.GetString("Topic_Top", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Login.
+        /// </summary>
+        public static string UserInfo_LoginLink {
+            get {
+                return ResourceManager.GetString("UserInfo_LoginLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Logout.
+        /// </summary>
+        public static string UserInfo_LogoutLink {
+            get {
+                return ResourceManager.GetString("UserInfo_LogoutLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Registration.
+        /// </summary>
+        public static string UserInfo_Registration {
+            get {
+                return ResourceManager.GetString("UserInfo_Registration", resourceCulture);
+            }
+        }
     }
 }
