@@ -14,7 +14,6 @@
 		<dependencies>
 			<dependency id="AutoMapper" version="3.2.1" />
 			<dependency id="EntityFramework" version="6.1.1" />
-			<dependency id="MarkdownDeep.NET" version="1.5" />
 		</dependencies>
 	</metadata>
 	<files>
