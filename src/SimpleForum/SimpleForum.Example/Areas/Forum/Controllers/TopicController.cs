@@ -15,7 +15,7 @@ namespace SimpleForum.Web.Controllers
 			using (var db = new SimpleForumDbContext())
 			{
 				// вынести в базовый контроллер, кэшировать
-				var user = db.Users.Single(u => u.Email == User.Identity.Name);
+				var user = db.Users.SingleOrDefault(u => u.Email == User.Identity.Name);
 
 				var topic = db.Set<Topic>()
 					.Include("Author")
