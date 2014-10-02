@@ -15,6 +15,14 @@
 
 <h2>@Model.Subject</h2>
 <hr />
+
+@if (Model.UserIsAdministrator)
+{
+	<div class="pull-right">
+		@Html.ActionLink("del", "DeleteTopic", "Administrator", new { id = Model.Id }, new { @class = "btn btn-danger" })
+	</div>
+}
+
 <p>
 	<a href="@Url.Action("Reply", "Write", new { id = Model.Id })" class="btn btn-primary">@ViewResources.Topic_PostReply</a>
 </p>

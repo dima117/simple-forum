@@ -16,6 +16,8 @@ namespace SimpleForum.Web.Models.Topic
 		public Guid AuthorId { get; set; }
 
 		public string AuthorDisplayName { get; set; }
+		
+		public bool UserIsAdministrator { get; set; }
 
 		public Guid SectionId { get; set; }
 

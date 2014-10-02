@@ -14,6 +14,9 @@ namespace SimpleForum.Web.Controllers
 		{
 			using (var db = new SimpleForumDbContext())
 			{
+				// вынести в базовый контроллер, кэшировать
+				var user = db.Users.Single(u => u.Email == User.Identity.Name);
+
 				var topic = db.Set<Topic>()
 					.Include("Author")
 					.Include("Section")
@@ -27,6 +30,7 @@ namespace SimpleForum.Web.Controllers
 
 				var model = Mapper.Map<Topic, TopicIndexModel>(topic);
 				model.Replies = replies.Select(Mapper.Map<Reply, TopicIndexReplyModel>).ToList();
+				model.UserIsAdministrator = user != null && user.IsAdministrator;
 				
 				return View(model);
 			}
